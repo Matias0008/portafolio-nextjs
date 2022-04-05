@@ -1,0 +1,153 @@
+#proyectos {
+  padding-bottom: 15rem;
+  flex-direction: column;
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 15rem;
+
+    .left {
+      flex: 1;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(even) .right {
+      margin-left: 0;
+    }
+
+    &:nth-child(even) .left {
+      margin-left: -150px;
+    }
+  }
+}
+
+.all-items {
+  .item {
+    .left {
+      .img {
+        height: 500px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+        position: relative;
+      }
+    }
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-left: -150px;
+  background-color: var(--body-bg);
+  padding: 5rem 3rem;
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  height: 280px;
+}
+
+.img {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+
+  @media (max-width: 768px) {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+.img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(90, 36, 237, 0.2196078431372549);
+}
+
+.project_title {
+  color: var(--subtitle);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project_subtitle {
+  color: var(--subtitle);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.project_desc {
+  color: var(--secondary-gray);
+  margin-bottom: 3rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn_primary {
+  font-size: 1.8rem;
+  padding: 0.6em 1.6em;
+  border-radius: 50px;
+}
+
+.outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--btncolor);
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}
+
+.external_link {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.svg {
+  width: 25px;
+}
+
+@media (max-width: 768px) {
+  .item:nth-child(even),
+  .item {
+    flex-direction: column !important;
+  }
+
+  .right,
+  .left {
+    margin-left: 0;
+    margin-top: -50px;
+  }
+
+  .item:nth-child(even) .left {
+    margin: 0 !important;
+  }
+}

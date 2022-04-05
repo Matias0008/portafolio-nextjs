@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.5.0",
+    "emailjs": "^3.8.0",
+    "formik": "^2.2.9",
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-scroll": "^1.8.6",
+    "sass": "^1.49.11",
+    "styled-components": "^5.3.5"
+  }
+}

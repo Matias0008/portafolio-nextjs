@@ -1,0 +1,101 @@
+#sobre_mi {
+  padding-bottom: 15rem;
+  flex-direction: column;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .left {
+    padding: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .left .card {
+      min-height: 150px;
+    }
+  }
+}
+
+.card {
+  box-shadow: var(--box-shadow);
+  padding: 3rem;
+  border-radius: 12px;
+  min-height: 400px;
+  max-width: 1300px;
+
+  .img {
+    margin-bottom: 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card_desc {
+    color: var(--secondary-gray);
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+}
+
+// Parte de la derecha
+.right {
+  .desc {
+    .nombre {
+      color: var(--primary-color);
+    }
+
+    .title {
+      color: var(--subtitle);
+      margin-bottom: 6rem;
+      width: fit-content;
+      font: {
+        size: 2.5rem;
+        weight: 700;
+      }
+    }
+  }
+}
+
+.desc_p {
+  margin-bottom: 5rem;
+}
+
+.social {
+  font-size: 3.5rem;
+  color: var(--secondary-black);
+  transition: color 0.3s ease-in-out;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  a {
+    display: flex;
+  }
+
+  .button {
+    width: fit-content;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    padding: 0.6em 1.6em;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: all 0.4s ease;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--body-bg);
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+  }
+}

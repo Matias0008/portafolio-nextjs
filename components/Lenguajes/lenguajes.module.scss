@@ -1,0 +1,26 @@
+#lenguajes {
+  padding-bottom: 15rem;
+  flex-direction: column;
+}
+
+#lenguajes .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#lenguajes .wrapper h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--paragraph-black);
+  margin-top: 1.2rem;
+}
+
+.wrapper_item {
+  display: block;
+}

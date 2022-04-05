@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #5924ed;
+  --secondary-black: #0d081a;
+  --secondary-gray: #48464b;
+  --body-bg: #efebfa;
+  --box-shadow: 0px 0px 20px #4705fc33;
+  --box-shadow-forms: 0px 0px 20px #4705fc33;
+  --subtitle: black;
+  --paragraph-black: #0d081a;
+  --hero: #525252;
+  --btncolor: #5924ed;
+  --nav-toggle: rgba(51, 51, 51, 0.99);
+  --header: #3d3d3d;
+  --header-top: rgba(61, 61, 61, 0.7);
+  --header-down: #3d3d3d;
+  --scroll-hero: red;
+  --scrollbg-hero: #525252;
+}
+
+.dark {
+  --body-bg: #191019;
+  --box-shadow: 0px 0px 20px #3e283e;
+  --box-shadow-forms: 0px 0px 15px blue;
+  --secondary-black: white;
+  --subtitle: white;
+  --secondary-gray: #cecace;
+  --paragraph-black: #cecace;
+  --hero: rgba(31, 31, 31, 0.8);
+  --btncolor: white;
+  --nav-toggle: rgba(31, 31, 31, 0.99);
+  --header: #251825;
+  --header-top: rgba(31, 31, 31, 1);
+  --header-down: #251825;
+  --scrollbg-hero: #1f1f1f;
+}
