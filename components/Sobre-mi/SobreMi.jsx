@@ -1,11 +1,11 @@
 import React from "react";
-
-import Image from "next/image";
 import { Link } from "react-scroll";
-import { BsInstagram, BsGithub } from "react-icons/bs";
+import Image from "next/image";
 
-import { Layout } from "../Layout";
-import imagen from "../../public/img/about-photo.webp";
+import { Layout } from "components/Layout";
+import imagen from "public/img/about-photo.webp";
+
+import { BsInstagram, BsGithub } from "react-icons/bs";
 
 import styles from "./sobre-mi.module.scss";
 

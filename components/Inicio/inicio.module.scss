@@ -1,3 +1,5 @@
+@import "/styles/mixins.scss";
+
 #inicio {
   min-height: 100vh;
   padding-top: 85px;
@@ -14,7 +16,6 @@
     display: block;
     position: relative;
     width: fit-content;
-    font-family: Montserrat;
 
     &:nth-child(1) {
       animation-delay: 1s;
@@ -42,51 +43,22 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
-    width: 0;
+    @include size(0, 100%);
     background-color: #dc143c;
     animation: text_reveal_box 1s ease;
     animation-delay: 0.5s;
   }
 }
 
-@keyframes text_reveal {
-  100% {
-    color: white;
-  }
-}
-
-@keyframes text_reveal_name {
-  100% {
-    color: crimson;
-    font-weight: 500;
-  }
-}
-
-@keyframes text_reveal_box {
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
 .scroll_down {
-  width: 100%;
-  height: 100px;
+  @include size(100%, 100px);
 
   .wrapper {
     height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+    @include flex(column, flex-end);
 
     span {
-      width: 20px;
-      height: 20px;
+      @include size(20px, 20px);
       border-bottom: 5px solid red;
       border-right: 5px solid red;
       transform: rotate(45deg);
@@ -115,5 +87,29 @@
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+
+@keyframes text_reveal_name {
+  100% {
+    color: crimson;
+    font-weight: 500;
+  }
+}
+
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
   }
 }

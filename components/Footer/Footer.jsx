@@ -1,12 +1,9 @@
 import React from "react";
-import Image from "next/image";
 
-import { Layout } from "../Layout";
+import { Layout } from "components/Layout";
 import { FooterLinks } from "./FooterLinks";
 
 import { BsInstagram, BsGithub } from "react-icons/bs";
-
-import logo from "../../public/img/icons/logo.svg";
 import styles from "./footer.module.scss";
 
 export const Footer = () => {

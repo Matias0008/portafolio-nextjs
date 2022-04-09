@@ -1,28 +1,25 @@
+@import "/styles/mixins.scss";
+
 @mixin navmenu($left) {
-  display: flex;
+  @include flex(column, center, center, no-wrap, 3rem);
+  @include size(100%, calc(100% - 85px));
+
   list-style-type: none;
-  flex-direction: column;
   background: var(--nav-toggle);
   position: fixed;
   padding: 2rem 0;
-  gap: 3rem;
   left: $left;
   top: 85px;
-  width: 100%;
-  height: calc(100% - 85px);
-  align-items: center;
-  justify-content: center;
   overflow-y: auto;
   transition: all 0.3s ease;
 }
 
 .header {
-  width: 100%;
+  @include size(100%, 85px);
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 998;
-  height: 85px;
   background-color: var(--header);
   transition: all 0.2s ease;
 }
@@ -40,9 +37,7 @@
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(row, space-between, center, no-wrap);
   font-size: 2rem;
   letter-spacing: 0.15rem;
   height: 100%;
@@ -52,7 +47,6 @@
       transform: uppercase;
     }
     font: {
-      family: "Montserrat";
       size: 1.8rem;
     }
     transition: all 0.3s ease;

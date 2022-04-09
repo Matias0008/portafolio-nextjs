@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useScroll } from "../../hooks/useScroll";
+
+import { useScroll } from "hooks/useScroll";
+import { Container } from "components/Layout";
+import { NavElements } from "./NavElements";
 
 import { FaSun, FaMoon } from "react-icons/fa";
 import { VscChromeClose, VscThreeBars } from "react-icons/vsc";
-
-import { NavElements } from "./NavElements";
-import { Container } from "../Layout";
 
 import styles from "./navbar.module.scss";
 

@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Titulo } from "./Titulo";
-import { Layout } from "../Layout";
 import { ScrollDown } from "./ScrollDown";
+import { Layout } from "components/Layout";
 
 import styles from "./inicio.module.scss";
 

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Layout } from "../Layout";
+import { Layout } from "components/Layout";
+import { LenguajesData } from "data/lenguajes";
 import { LenguajesGrid } from "./LenguajesGrid";
-import { LenguajesData } from "../../data/lenguajes";
 
 import styles from "./lenguajes.module.scss";
 

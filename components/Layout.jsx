@@ -74,7 +74,6 @@ export const SectionHeading = styled.h2.attrs((props) => ({
   text-align: center;
   position: relative;
   margin-bottom: 10rem;
-  font-family: Montserrat;
   color: var(--secondary-black);
 
   &::before {
@@ -85,7 +84,7 @@ export const SectionHeading = styled.h2.attrs((props) => ({
     width: max-content;
     text-align: center;
     text-transform: uppercase;
-    font-family: Montserrat;
+
     letter-spacing: 0.2rem;
     color: transparent;
     -webkit-text-stroke: 1.5px #5a24ed2f;

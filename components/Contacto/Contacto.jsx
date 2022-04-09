@@ -1,13 +1,13 @@
 import React from "react";
 
+import { Layout } from "components/Layout";
 import { Formulario } from "./Formulario";
-import { Layout } from "../Layout";
 
-import styled from "./contacto.module.scss";
+import styles from "./contacto.module.scss";
 
 export const Contacto = () => {
   return (
-    <Layout id={styled.contacto} heading="Contacto">
+    <Layout id={styles.contacto} heading="Contacto">
       <Formulario />
     </Layout>
   );

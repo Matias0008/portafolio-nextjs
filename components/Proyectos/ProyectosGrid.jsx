@@ -4,14 +4,14 @@ import Image from "next/image";
 import styles from "./proyectos.module.scss";
 
 export const ProyectosGrid = ({ data }) => {
-  return data.map(({ name, subtitle, desc, url, image, id }) => {
+  return data.map(({ titulo, subtitulo, descripcion, url, imagen, id }) => {
     return (
       <div className={styles.item} key={id}>
         <div className={styles.left}>
           <div className={styles.img}>
             <Image
-              src={image}
-              alt={name}
+              src={imagen}
+              alt={titulo}
               objectFit={"cover"}
               quality={100}
               objectPosition={"30% 70%"}
@@ -20,9 +20,9 @@ export const ProyectosGrid = ({ data }) => {
           </div>
         </div>
         <div className={styles.right}>
-          <h2 className={styles.project_title}>{name}</h2>
-          <h3 className={styles.project_subtitle}>{subtitle}</h3>
-          <p className={styles.project_desc}>{desc}</p>
+          <h2 className={styles.project_title}>{titulo}</h2>
+          <h3 className={styles.project_subtitle}>{subtitulo}</h3>
+          <p className={styles.project_desc}>{descripcion}</p>
           <div className={styles.button}>
             <a
               href={`${url}`}

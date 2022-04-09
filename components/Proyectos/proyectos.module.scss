@@ -1,11 +1,11 @@
+@import "/styles/mixins.scss";
+
 #proyectos {
   padding-bottom: 15rem;
   flex-direction: column;
 
   .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(null, center, center, null, null);
     max-width: 900px;
     margin: 0 auto;
     margin-bottom: 15rem;
@@ -47,9 +47,7 @@
 }
 
 .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flex(column, center);
   flex: 1;
   margin-left: -150px;
   background-color: var(--body-bg);
@@ -62,15 +60,13 @@
 
 .img {
   position: relative;
-  width: 450px;
-  height: 450px;
+  @include size(450px, 450px);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
 
   @media (max-width: 768px) {
-    height: 350px;
-    width: 350px;
+    @include size(350px, 350px);
   }
 }
 
@@ -79,8 +75,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  @include size(100%, 100%);
   background-color: rgba(90, 36, 237, 0.2196078431372549);
 }
 
@@ -102,9 +97,7 @@
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  @include flex(row, flex-start, center, null, null);
 }
 
 .btn_primary {
@@ -126,9 +119,7 @@
 }
 
 .external_link {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
+  @include flex(null, null, center, null, 0.5em);
 }
 
 .svg {
