@@ -17,15 +17,17 @@ export const Navbar = () => {
   const { scroll, height } = useScroll();
 
   useEffect(() => {
-    state.clicked
-      ? document.body.classList.add("block-scroll")
-      : document.body.classList.remove("block-scroll");
-
     setState({
       ...state,
       theme: localStorage.getItem("theme") || "light",
     });
   }, []);
+
+  useEffect(() => {
+    state.clicked
+      ? document.body.classList.add("block-scroll")
+      : document.body.classList.remove("block-scroll");
+  }, [state.clicked]);
 
   useEffect(() => {
     if (state.theme === "dark") {

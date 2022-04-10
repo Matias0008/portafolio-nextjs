@@ -8,6 +8,7 @@ import imagen from "public/img/about-photo.webp";
 import { BsInstagram, BsGithub } from "react-icons/bs";
 
 import styles from "./sobre-mi.module.scss";
+import stylescontacto from "../Contacto/contacto.module.scss";
 
 export const SobreMi = () => {
   return (
@@ -47,9 +48,9 @@ export const SobreMi = () => {
             <div className={styles.social}>
               <div>
                 <Link
-                  to="contacto"
+                  to={stylescontacto.contacto}
                   className={styles.button}
-                  smooth={false}
+                  smooth={true}
                   offset={-85}
                 >
                   Contacto

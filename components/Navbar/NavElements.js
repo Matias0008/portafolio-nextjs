@@ -40,7 +40,7 @@ export const NavElements = ({ handleClick, clicked }) => {
               activeClass="active"
               to={href}
               spy={true}
-              smooth={false}
+              smooth={true}
               offset={-85}
               spyThrottle={0}
               className="nav_menu_link"
