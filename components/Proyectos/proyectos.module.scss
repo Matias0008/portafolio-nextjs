@@ -60,13 +60,13 @@
 
 .img {
   position: relative;
-  @include size(450px, 450px);
+  @include size(null, 450px);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
 
   @media (max-width: 768px) {
-    @include size(350px, 350px);
+    @include size(null, 350px);
   }
 }
 
