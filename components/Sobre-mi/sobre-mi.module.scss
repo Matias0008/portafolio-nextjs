@@ -1,12 +1,11 @@
+@import "/styles/mixins.scss";
+
 #sobre_mi {
   padding-bottom: 15rem;
   flex-direction: column;
 
   .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    @include flex(row, center, center, null, 30px);
   }
 
   .left {
@@ -72,9 +71,7 @@
   font-size: 3.5rem;
   color: var(--secondary-black);
   transition: color 0.3s ease-in-out;
-  display: flex;
-  gap: 20px;
-  align-items: center;
+  @include flex(row, null, center, null, 20px);
 
   a {
     display: flex;
