@@ -15,7 +15,7 @@ export const FooterLinks = () => {
               activeClass="active"
               to={href}
               spy={true}
-              smooth={false}
+              smooth={true}
               offset={-85}
               ignoreCancelEvents={true}
               spyThrottle={0}

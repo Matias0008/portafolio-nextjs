@@ -1,5 +1,4 @@
 @import "/styles/mixins.scss";
-
 #inicio {
   min-height: 100vh;
   padding-top: 85px;
@@ -8,45 +7,33 @@
 }
 
 .titulo {
-  h1 {
-    font-size: clamp(2rem, 12vw, 7rem);
-    color: transparent;
-    animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1s;
+  font-size: clamp(2rem, 12vw, 7rem);
+  color: white;
+
+  .titulo_content {
     display: block;
-    position: relative;
-    width: fit-content;
-
-    &:nth-child(1) {
-      animation-delay: 1s;
-      span {
-        animation-delay: 0.5s;
-      }
-    }
-    &:nth-child(2) {
-      animation-delay: 2s;
-      span {
-        animation-delay: 1.5s;
-      }
-    }
-    &:nth-child(3) {
-      animation: text_reveal_name 0.5s ease forwards;
-      animation-delay: 3s;
-
-      span {
-        animation-delay: 2.5s;
-      }
-    }
+    opacity: 0;
+    animation: revealText 0.5s forwards;
+    animation-delay: 0.5s;
+  }
+  .titulo_segundo {
+    animation-delay: 0.7s;
   }
 
-  span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    @include size(0, 100%);
-    background-color: #dc143c;
-    animation: text_reveal_box 1s ease;
-    animation-delay: 0.5s;
+  .titulo_tercero {
+    animation-delay: 0.9s;
+    color: #dc143c;
+    font-weight: 500;
+  }
+}
+
+@keyframes revealText {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -63,18 +50,18 @@
       border-right: 5px solid red;
       transform: rotate(45deg);
       animation: animate 2s infinite;
+      animation-delay: 1.9s;
 
       &:nth-child(2) {
-        animation-delay: -0.2s;
+        animation-delay: 1.7s;
       }
 
       &:nth-child(3) {
-        animation-delay: -0.4s;
+        animation-delay: 1.5s;
       }
     }
   }
 }
-
 @keyframes animate {
   0% {
     opacity: 0;
@@ -87,29 +74,5 @@
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
-  }
-}
-
-@keyframes text_reveal {
-  100% {
-    color: white;
-  }
-}
-
-@keyframes text_reveal_name {
-  100% {
-    color: crimson;
-    font-weight: 500;
-  }
-}
-
-@keyframes text_reveal_box {
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
   }
 }

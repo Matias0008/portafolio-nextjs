@@ -137,10 +137,11 @@
   position: relative;
   outline: 0;
   display: flex;
+  width: 80px;
   transition: all 0.3s ease;
 
   span {
-    width: 35px;
+    width: 40px;
     height: 35px;
     line-height: 38px;
     display: block;
