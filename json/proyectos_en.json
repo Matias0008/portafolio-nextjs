@@ -3,7 +3,7 @@
     "id": 1,
     "titulo": "Rick and Morty",
     "subtitulo": "Embating Rick And Morty API",
-    "descripcion": "Application which is used Fetch to perform Requests to the API and use that information to our liking.",
+    "descripcion": "Application which uses Fetch to perform Requests to the API and use that information to our liking.",
     "imagen": "https://i.ibb.co/Fb4X9RG/rickandmorty.webp",
     "url": "https://md-rickandmorty.herokuapp.com/"
   },
@@ -26,8 +26,8 @@
   {
     "id": 4,
     "titulo": "Weather App",
-    "subtitulo": "Web application to see the climate",
-    "descripcion": "Through the consumption of the API we can obtain the climate of different cities in all parts of the world.",
+    "subtitulo": "Web application to check the weather",
+    "descripcion": "Through the consumption of the API we can obtain the weather of different cities around the world.",
     "imagen": "https://i.ibb.co/72fXv6L/weatherapp.webp",
     "url": "https://md-weatherapp.herokuapp.com/"
   }
