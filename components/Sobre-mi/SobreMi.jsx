@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { useContext } from "react";
+
 import Image from "next/image";
 
+import { LengContext } from "context/lengContext";
 import { Layout } from "components/Layout";
 import imagen from "public/img/about-photo.webp";
 
@@ -11,8 +14,11 @@ import styles from "./sobre-mi.module.scss";
 import stylescontacto from "../Contacto/contacto.module.scss";
 
 export const SobreMi = () => {
+  const { lenguaje } = useContext(LengContext);
+  const { sobremi } = lenguaje;
+
   return (
-    <Layout id={styles.sobre_mi} heading="Sobre mi">
+    <Layout id={styles.sobre_mi} heading={sobremi.heading}>
       <div className={styles.wrapper}>
         <div className={styles.left}>
           <div className={styles.card}>
@@ -26,25 +32,15 @@ export const SobreMi = () => {
               />
             </div>
             <div className={styles.card_desc}>
-              <p>
-                Desarrollador web principiante, de Argentina. Principalmente
-                autodidacta, disfruto programar y progresar día tras día.
-              </p>
+              <p>{sobremi.desc}</p>
             </div>
           </div>
         </div>
         <div className={styles.right}>
           <div className={styles.desc}>
             <h2 className={styles.nombre}>Matias Delgado</h2>
-            <h2 className={styles.title}>Estudiante y autodidacta</h2>
-            <p className={styles.desc_p}>
-              Estoy estudiando la carrera Ing. en Sistemas. Dispuesto a dar todo
-              de mi con el fin de superarme día tras día en este increible mundo
-              de la programación. Aspiro a desarrollar mis aptitudes, obtener
-              una posición para participar y colaborar a mi experiencia.
-              Constantemente me encuentro aprendiendo y desarrollando
-              aplicaciones por placer.
-            </p>
+            <h2 className={styles.title}>{sobremi.subtitulo}</h2>
+            <p className={styles.desc_p}>{sobremi.longdesc}</p>
             <div className={styles.social}>
               <div>
                 <Link
@@ -53,7 +49,7 @@ export const SobreMi = () => {
                   smooth={true}
                   offset={-85}
                 >
-                  Contacto
+                  {sobremi.btn_contacto}
                 </Link>
               </div>
               <a

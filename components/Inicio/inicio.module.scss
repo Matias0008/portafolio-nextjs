@@ -1,10 +1,20 @@
 @import "/styles/mixins.scss";
+
 #inicio {
   min-height: 100vh;
   padding-top: 85px;
   background-color: var(--hero);
   transition: background-color 0.3s ease;
+  flex-direction: column;
+  justify-content: center;
+  gap: 120px;
 }
+
+// Centro mi nombre
+// #inicio div:nth-child(1) {
+//   flex: 1;
+//   justify-content: center;
+// }
 
 .titulo {
   font-size: clamp(2rem, 12vw, 7rem);
@@ -22,7 +32,7 @@
 
   .titulo_tercero {
     animation-delay: 0.9s;
-    color: #dc143c;
+    color: red;
     font-weight: 500;
   }
 }
@@ -75,4 +85,36 @@
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
   }
+}
+
+// Esto es para el lenguaje
+
+.langdiv {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.lang_btn {
+  border: none;
+  background: none;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.lang_btn span {
+  cursor: pointer;
+}
+
+.lang_btn:nth-child(1) {
+  padding-right: 40px;
+}
+
+.lang_selected {
+  opacity: 0.4;
+  transition: opacity 1s ease;
+  pointer-events: none;
 }

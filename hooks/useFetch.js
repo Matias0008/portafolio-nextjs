@@ -7,9 +7,7 @@ export const useFetch = (url) => {
   });
 
   useEffect(() => {
-    fetch(url, {
-      mode: "cors",
-    })
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setState({

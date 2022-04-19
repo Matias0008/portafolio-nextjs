@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "titulo": "Rick and Morty",
+    "subtitulo": "Embating Rick And Morty API",
+    "descripcion": "Application which is used Fetch to perform Requests to the API and use that information to our liking.",
+    "imagen": "https://i.ibb.co/Fb4X9RG/rickandmorty.webp",
+    "url": "https://md-rickandmorty.herokuapp.com/"
+  },
+  {
+    "id": 2,
+    "titulo": "La Llegada",
+    "subtitulo": "Administration web application",
+    "descripcion": "Application that allows the administration of customers, products and sales. Using the MySQL database.",
+    "imagen": "https://i.ibb.co/NZqzSrN/lallegada.webp",
+    "url": "https://md-lallegada.herokuapp.com/"
+  },
+  {
+    "id": 3,
+    "titulo": "Mailer App",
+    "subtitulo": "Web application to send emails",
+    "descripcion": "With the help of Sendgrid we can send emails to anyone. In addition, we can visualize them as these are saved.",
+    "imagen": "https://i.ibb.co/cFGTVct/mdmailer.webp",
+    "url": "http://md-mailer.herokuapp.com/"
+  },
+  {
+    "id": 4,
+    "titulo": "Weather App",
+    "subtitulo": "Web application to see the climate",
+    "descripcion": "Through the consumption of the API we can obtain the climate of different cities in all parts of the world.",
+    "imagen": "https://i.ibb.co/72fXv6L/weatherapp.webp",
+    "url": "https://md-weatherapp.herokuapp.com/"
+  }
+]

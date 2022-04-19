@@ -10,6 +10,7 @@ export const Layout = ({
   justify = "",
   align = "",
   heading = "",
+  subchilden = "",
 }) => {
   return (
     <>
@@ -23,6 +24,7 @@ export const Layout = ({
         >
           {children}
         </LayoutContainer>
+        {subchilden && subchilden}
       </LayoutSection>
     </>
   );

@@ -7,7 +7,7 @@ import styled from "./contacto.module.scss";
 import emailjs from "@emailjs/browser";
 emailjs.init("user_sYZt8fgmDR0DX2zxnN0dQ");
 
-export const Formulario = () => {
+export const Formulario = ({ lenguaje, leng }) => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
   return (
@@ -23,27 +23,27 @@ export const Formulario = () => {
 
           //   Validacion nombre
           if (!valores.nombre) {
-            errores.nombre = "Porfavor ingresa tu nombre";
+            errores.nombre = lenguaje.contacto.error_nombre;
           } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
-            errores.nombre = "El nombre es invalido.";
+            errores.nombre = lenguaje.contacto.nombre_invalido;
           }
 
           //   Validacion correo
           if (!valores.email) {
-            errores.email = "Porfavor ingresa tu correo";
+            errores.email = lenguaje.contacto.error_email;
           } else if (
             !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
               valores.email
             )
           ) {
-            errores.email = "El correo es invalido.";
+            errores.email = lenguaje.contacto.email_invalido;
           }
 
           //   Validacion mensaje
           if (!valores.mensaje) {
-            errores.mensaje = "Porfavor ingresa un mensaje";
+            errores.mensaje = lenguaje.contacto.error_mensaje;
           } else if (valores.mensaje.length < 10) {
-            errores.mensaje = "El mensaje es muy corto";
+            errores.mensaje = lenguaje.contacto.mensaje_invalido;
           }
 
           return errores;
@@ -74,7 +74,7 @@ export const Formulario = () => {
                 <Field
                   type={"text"}
                   name="nombre"
-                  placeholder={"Tu nombre"}
+                  placeholder={lenguaje.contacto.nombre}
                   className={styled.nombre}
                 />
                 <ErrorMessage
@@ -88,7 +88,7 @@ export const Formulario = () => {
                 <Field
                   type={"email"}
                   name="email"
-                  placeholder={"Tu email"}
+                  placeholder={lenguaje.contacto.email}
                   className={styled.email}
                 />
                 <ErrorMessage
@@ -104,7 +104,7 @@ export const Formulario = () => {
               <Field
                 name="mensaje"
                 as="textarea"
-                placeholder="Mensaje"
+                placeholder={lenguaje.contacto.mensaje}
                 className={styled.textarea}
               />
               <ErrorMessage
@@ -117,7 +117,7 @@ export const Formulario = () => {
 
             <div className={styled.content_input}>
               <button className={styled.btn_enviar} type="submit">
-                Enviar
+                {leng === "es" ? "Enviar" : "Submit"}
               </button>
             </div>
           </Form>

@@ -4,15 +4,22 @@ import { Layout } from "components/Layout";
 import { FooterLinks } from "./FooterLinks";
 
 import { BsInstagram, BsGithub } from "react-icons/bs";
+
+import { LengContext } from "context/lengContext";
+import { useContext } from "react";
+
 import styles from "./footer.module.scss";
 
 export const Footer = () => {
+  const { handleLeng, lenguaje } = useContext(LengContext);
+  const { footer } = lenguaje;
+
   return (
     <Layout id={styles.footer}>
       <footer className={styles.footer}>
         <div className={styles.footer_item}>
           <div className={styles.item_desc + " " + styles.item}>
-            Gracias por ver!
+            {footer.despedida}
           </div>
           <div className={styles.item_ciudad + " " + styles.item}>
             <a

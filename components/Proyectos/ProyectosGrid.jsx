@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "./proyectos.module.scss";
 
-export const ProyectosGrid = ({ data }) => {
+export const ProyectosGrid = ({ data, leng }) => {
   return data.map(({ titulo, subtitulo, descripcion, url, imagen, id }) => {
     return (
       <div className={styles.item} key={id}>
@@ -36,7 +36,7 @@ export const ProyectosGrid = ({ data }) => {
                 styles.external_link
               }
             >
-              <span>Ver web</span>
+              <span>{leng === "es" ? "Ver web" : "Open web"}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 
+import { LengContext } from "context/lengContext";
+import { useContext } from "react";
+
 import inicio from "../Inicio/inicio.module.scss";
 import sobre_mi from "../Sobre-mi/sobre-mi.module.scss";
 import lenguajes from "../Lenguajes/lenguajes.module.scss";
@@ -31,9 +34,12 @@ export const Links = [
 ];
 
 export const NavElements = ({ handleClick, clicked }) => {
+  const { lenguaje } = useContext(LengContext);
+
   return (
     <>
       {Links.map(({ name, href }) => {
+        let nameNormalized = name.toLowerCase().replace(" ", "");
         return (
           <li className="nav_menu_item" key={name}>
             <Link
@@ -46,7 +52,7 @@ export const NavElements = ({ handleClick, clicked }) => {
               className="nav_menu_link"
               onClick={clicked ? handleClick : undefined}
             >
-              {name}
+              {lenguaje.navbar[nameNormalized]}
             </Link>
           </li>
         );
