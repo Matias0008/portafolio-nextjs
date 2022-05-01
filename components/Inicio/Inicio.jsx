@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Titulo } from "./Titulo";
-import { ScrollDown } from "./ScrollDown";
 import { Layout } from "components/Layout";
 
 import styles from "./inicio.module.scss";
@@ -18,7 +17,6 @@ export const Inicio = () => {
         subchilden={<LangSelector />}
       >
         <Titulo />
-        {/* <ScrollDown /> */}
       </Layout>
     </>
   );
