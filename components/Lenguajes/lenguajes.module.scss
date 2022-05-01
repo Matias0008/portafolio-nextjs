@@ -9,6 +9,10 @@
     max-width: 900px;
     margin: 0 auto;
 
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+
     h2 {
       text: {
         align: center;

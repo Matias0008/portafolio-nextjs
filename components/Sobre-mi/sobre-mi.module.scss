@@ -10,6 +10,9 @@
 
   .left {
     padding: 2rem 3rem 2rem 0;
+    @media screen and (max-width: 768px) {
+      padding: 2rem;
+    }
   }
 
   @media (max-width: 768px) {
