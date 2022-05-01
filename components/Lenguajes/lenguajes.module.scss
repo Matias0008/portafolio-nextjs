@@ -5,8 +5,8 @@
   flex-direction: column;
 
   .wrapper {
-    @include flex(row, center, center, wrap, 30px);
-    max-width: 1000px;
+    @include flex(row, space-between, center, wrap, 30px);
+    max-width: 900px;
     margin: 0 auto;
 
     h2 {

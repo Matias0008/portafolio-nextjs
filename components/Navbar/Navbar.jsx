@@ -4,6 +4,7 @@ import { useScroll } from "hooks/useScroll";
 import { Container } from "components/Layout";
 import { NavElements } from "./NavElements";
 
+import { MaterialUISwitch } from "./Switch";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { VscChromeClose, VscThreeBars } from "react-icons/vsc";
 
@@ -13,13 +14,16 @@ export const Navbar = () => {
   const [state, setState] = useState({
     clicked: false,
     theme: null,
+    checked: false,
   });
+
   const { scroll, height } = useScroll();
 
   useEffect(() => {
     setState({
       ...state,
       theme: localStorage.getItem("theme") || "light",
+      checked: localStorage.getItem("theme") === "dark" ? true : false,
     });
   }, []);
 
@@ -49,6 +53,7 @@ export const Navbar = () => {
     setState({
       ...state,
       theme: state.theme === "light" ? "dark" : "light",
+      checked: state.theme === "light" ? true : false,
     });
   };
 
@@ -74,19 +79,7 @@ export const Navbar = () => {
               <NavElements handleClick={handleClick} clicked={state.clicked} />
             </ul>
             <div className={styles.tema}>
-              <button
-                className={`${styles.switch} ${
-                  state.theme === "dark" ? styles.active : ""
-                }`}
-                onClick={handleTheme}
-              >
-                <span>
-                  <FaSun />
-                </span>
-                <span>
-                  <FaMoon />
-                </span>
-              </button>
+              <MaterialUISwitch onClick={handleTheme} checked={state.checked} />
             </div>
           </nav>
         </Container>
